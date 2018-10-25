@@ -13,14 +13,14 @@ public class TestSort {
 	@Before
 	public void setUp() throws Exception {
 		sort = new Sort();
-		sortArray = new int[100];
+		sortArray = new int[20000];
 		for(int i=0 ; i < sortArray.length ; i++){
 			sortArray[i] = (int)(Math.random()*100);
 		}
 	}
 
 	@Test
-	public void test() {
+	public void bubbleSort() {
 		Sort.bubbleSort(sortArray);
 		boolean sortResult = true;
 		for(int i=0;i<sortArray.length-1;i++){
